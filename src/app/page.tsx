@@ -11,6 +11,34 @@ import featuredApps from "@/data/featuredApps.json";
 import featuredWebApps from "@/data/featuredWebApps.json";
 import avatarImg from "@/assets/images/avatar.png";
 
+const PROJECTS: Project[] = [
+  ...featuredApps.map((app) => ({
+    id: app.name.toLowerCase().replace(/\s+/g, "-"),
+    title: app.name,
+    subtitle: "",
+    description: app.description,
+    category: "mobile" as const,
+    tags: [],
+    features: [],
+    links: { playStore: app.playStoreLink },
+    details: app.description,
+    image: app.iconUrl,
+    installs: app.installs,
+    screenSample: app.screenSample,
+  })),
+  ...featuredWebApps.map((app) => ({
+    id: app.name.toLowerCase().replace(/\s+/g, "-"),
+    title: app.name,
+    subtitle: "",
+    description: app.description,
+    category: "web" as const,
+    tags: [],
+    features: [],
+    links: { live: app.liveLink, repo: app.repoLink },
+    details: app.description,
+    image: app.iconUrl
+  })),
+];
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
