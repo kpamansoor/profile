@@ -27,6 +27,8 @@
     "name": "All apps",
     "description": "View other mobile apps",
     "playStoreLink": "https://play.google.com/store/apps/developer?id=Mohammed+Mansoor",
-    "iconUrl": "https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000"
+    "iconUrl": "https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000",
+    "screenSample":"",
+    "installs":""
   }
 ]
