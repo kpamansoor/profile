@@ -1,0 +1,309 @@
+.projectDrawer {
+  font-family: var(--font-public-sans), sans-serif;
+}
+
+.projectCategory {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.drawerGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .drawerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.visualContainer {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: inset 0 0 40px var(--shadow);
+}
+
+/* Phone Mockup */
+.phoneMockup {
+  width: 180px;
+  height: 360px;
+  background: #1e1e24;
+  border: 8px solid #2e303d;
+  border-radius: 28px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.appHeader {
+  padding: 0.8rem 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.appLogo {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.appContent {
+  flex-grow: 1;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+}
+
+.appCard {
+  height: 50px;
+  border-radius: 8px;
+  background: var(--border);
+  opacity: 0.4;
+  border: 1px solid var(--border);
+}
+
+/* Browser Mockup */
+.browserMockup {
+  width: 100%;
+  max-width: 380px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.browserBar {
+  background: var(--border);
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--foreground);
+  opacity: 0.3;
+}
+
+.addressBar {
+  background: var(--background);
+  border-radius: 4px;
+  font-size: 0.6rem;
+  padding: 0.15rem 0.6rem;
+  flex-grow: 1;
+  color: var(--foreground);
+  opacity: 0.6;
+  text-align: center;
+  font-family: monospace;
+}
+
+.browserScreen {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 150px;
+}
+
+.webHeader {
+  height: 12px;
+  width: 30%;
+  background: var(--border);
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.webHero {
+  height: 45px;
+  background: var(--accent-subtle);
+  border-radius: 6px;
+  border: 1px dashed var(--accent);
+}
+
+.webGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.webCell {
+  height: 35px;
+  background: var(--border);
+  border-radius: 4px;
+  opacity: 0.4;
+}
+
+/* Typography Inside Drawer */
+.subheading {
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.projectLongDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.featuresList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.featuresList li {
+  display: flex;
+  align-items: start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.checkmark {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Sidebar Specs */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: sticky;
+  top: 0;
+}
+
+.sidebarSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sidebarHeading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--border);
+  border-radius: 12px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.linksGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  background: var(--accent);
+  color: var(--background);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.actionBtn svg {
+  stroke: var(--background);
+  transition: transform 0.2s ease;
+}
+
+.actionBtn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px var(--shadow-hover);
+}
+
+.actionBtn:hover svg {
+  transform: translate(1px, -1px);
+}
+
+.actionBtn.outline {
+  background: transparent;
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+.actionBtn.outline svg {
+  stroke: var(--foreground);
+}
+
+.actionBtn.outline:hover {
+  background: var(--border);
+  border-color: var(--border);
+}

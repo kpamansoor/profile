@@ -1,0 +1,21 @@
+[
+  {
+    "name": "TrendLense",
+    "description": "Smarter Stock Insights, Instantly. Get real-time stock filters, analysis, and smart alerts for your favorite Indian stocks. Make faster, data-driven investment decisions.",
+    "liveLink": "https://trendlense.in/",
+    "iconUrl":"https://trendlense.in/assets/images/logo_png.png"
+  },
+  {
+    "name": "Free Resume Builder",
+    "description": "Build a professional, job-winning resume in minutes. Choose from elegant ATS-friendly templates, customize styling, fonts, and colors, and export high-quality PDFs instantly for free..",
+    "liveLink": "https://freeresumebuilder.mdmansoor.in/",
+    "repoLink": "https://github.com/mansoor/novella",
+    "iconUrl": "https://img.icons8.com/?size=100&id=bLp8jngMI59L&format=png&color=000000"
+  },  
+  {
+    "name": "All web apps",
+    "description": "View other web applications developed by me.",
+    "liveLink": "https://mansoor.dev/web",
+    "iconUrl": "https://img.icons8.com/ios-filled/50/000000/globe.png"
+  }
+]

@@ -1,0 +1,88 @@
+.deckWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.triggerText {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.triggerText:hover {
+  opacity: 0.8;
+}
+
+.deck {
+  position: absolute;
+  left: 100%;
+  padding-left: 14px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  pointer-events: none;
+  width: 40px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.deck.open {
+  pointer-events: auto;
+  width: 395px;
+}
+
+.card {
+  position: absolute;
+  left: 14px;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px var(--shadow);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--foreground);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(calc(var(--i) * 2px), calc(var(--i) * -1px), 0) scale(calc(1 - var(--i) * 0.04));
+  z-index: calc(10 - var(--i));
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* On open */
+.open .card {
+  pointer-events: auto;
+  opacity: 1;
+  /* Fan out horizontally */
+  transform: translate3d(calc(var(--i) * 95px), -18px, 0);
+  box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+.card:hover {
+  background: var(--card-hover) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  z-index: 20 !important;
+}
+
+@media (max-width: 600px) {
+  .deck.open {
+    width: 320px;
+  }
+
+  /* On mobile, stack vertical slightly or make fan out tighter */
+  .open .card {
+    transform: translate3d(calc(var(--i) * 78px), -14px, 0) scale(0.9);
+  }
+  .card:hover {
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Malayalam Voice to Text",
+    "installs":"954,000+",
+    "description": "Quick and easy way to convert Malayalam voice/speach/speaking to text. Forget about installing Malayalam keyboard and typing. This app will reduce your effort to type it. Just speak , the app will convert it to Malayalam text quickly.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.mansoor.malayalamvoice",
+    "iconUrl": "https://play-lh.googleusercontent.com/Ad5Py1lVusXMXUmOqCbvxVhAGPC0aykLFggFpV3djjfYfrk3FQkMXpMRCluLqm3E274q=w480-h960-rw",
+    "screenSample":"https://play-lh.googleusercontent.com/w_CM3lrTRRDUEc-LSMlenpaOaj4jsSTm9tn1pELSrRgop2jaUCV6AVUlDqPGGq_qXSI=w526-h296-rw"
+  },
+  {
+    "name": "TrendLense",
+    "installs":"5000+",
+    "description": "TrendLense is a 'make in India' app helps you discover powerful stock filters and keep track of market trends in India. You can explore different filters, view stock lists, and get insights to make better decisions.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.mansoor.trendlense",
+    "iconUrl": "https://play-lh.googleusercontent.com/LmiW-FjBg6r9rxTg0pmYYZPYZY55JjT_ywNXuk5kKHNDUTIuYnVbVUtpeT__Lf-Gi2DXkcfq151DopwHAylwpw=w240-h480-rw",
+    "screenSample":"https://play-lh.googleusercontent.com/l9qlwoy77mUU9ZHuDAPfmF6Bq6nseG3thZGOqhv49N7nfKihT_mC4OyNZRB245XTinbXabpK2w19DHnephlE=w526-h296-rw"
+  },
+  {
+    "name": "Vaak Malayalam Dictionary",
+    "installs":"3500+",
+    "description": "Vaak is a malayalam to english and english to malayalam offline dictionary. It Works completely offline without any further file download and light weight as 8MB.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.personal.mansoor.httptest",
+    "iconUrl": "https://play-lh.googleusercontent.com/lilP_YBh_2MCI8eyA7p4OcihuOn4XnHKO0yOeLrboju8Uova0k1gD5IPjj8MqBeWJMI=w240-h480-rw",
+    "screenSample":"https://play-lh.googleusercontent.com/pMg0yrCeVKFJwNGTGOmtmlRmbHVSHD7e4C57m7iIMGYcA5DUZjXGBuusEDL2BYgA--0=w526-h296-rw"
+  },
+  {
+    "name": "All apps",
+    "description": "View other mobile apps",
+    "playStoreLink": "https://play.google.com/store/apps/developer?id=Mohammed+Mansoor",
+    "iconUrl": "https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000"
+  }
+]
