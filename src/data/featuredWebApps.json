@@ -3,7 +3,8 @@
     "name": "TrendLense",
     "description": "Smarter Stock Insights, Instantly. Get real-time stock filters, analysis, and smart alerts for your favorite Indian stocks. Make faster, data-driven investment decisions.",
     "liveLink": "https://trendlense.in/",
-    "iconUrl":"https://trendlense.in/assets/images/logo_png.png"
+    "iconUrl":"https://trendlense.in/assets/images/logo_png.png",
+    "repoLink":""
   },
   {
     "name": "Free Resume Builder",
@@ -16,6 +17,7 @@
     "name": "All web apps",
     "description": "View other web applications developed by me.",
     "liveLink": "https://mansoor.dev/web",
-    "iconUrl": "https://img.icons8.com/ios-filled/50/000000/globe.png"
+    "iconUrl": "https://img.icons8.com/ios-filled/50/000000/globe.png",
+    "repoLink":""
   }
 ]
