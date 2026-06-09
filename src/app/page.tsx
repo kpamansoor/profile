@@ -215,15 +215,15 @@ export default function Home() {
             <div className={styles.skillsGrid}>
               <div className={styles.skillsGroup}>
                 <h4>Mobile Architectures</h4>
-                <p>React Native, Expo, Swift, Kotlin, WatermelonDB, Reanimated</p>
+                <p>Flutter, React Native, Kotlin, Sqlite, Android Native</p>
               </div>
               <div className={styles.skillsGroup}>
                 <h4>Web & Backend</h4>
-                <p>Next.js, React, Node.js, TypeScript, WebSockets, REST/GraphQL</p>
+                <p>Next.js, React, Node.js, Python, TypeScript, AWS, MongoDB, MySQL, MSSQL, REST</p>
               </div>
               <div className={styles.skillsGroup}>
                 <h4>Design & Tooling</h4>
-                <p>OKLCH Colors, CSS Modules, Figma, Git, Vercel, Native bridges</p>
+                <p>Figma, Git, Vercel, Native bridges</p>
               </div>
             </div>
           </div>

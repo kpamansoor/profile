@@ -12,12 +12,12 @@
     "liveLink": "https://freeresumebuilder.mdmansoor.in/",
     "repoLink": "https://github.com/mansoor/novella",
     "iconUrl": "https://img.icons8.com/?size=100&id=bLp8jngMI59L&format=png&color=000000"
-  },  
-  {
-    "name": "All web apps",
-    "description": "View other web applications developed by me.",
-    "liveLink": "https://mansoor.dev/web",
-    "iconUrl": "https://img.icons8.com/ios-filled/50/000000/globe.png",
-    "repoLink":""
+  }, 
+    {
+    "name": "ClearCut — AI Background Remover.",
+    "description": "Remove the background from any photo instantly and free with ClearCut. AI-powered, unlimited use, no sign-up, no watermark. Works on JPG, PNG, WebP, BMP &amp; TIFF — processed privately in your browser.",
+    "liveLink": "https://clearcut.mdmansoor.in/",
+    "repoLink": "https://github.com/mansoor/novella",
+    "iconUrl": "https://img.icons8.com/?size=100&id=POBc2SrrhhnF&format=png&color=000000"
   }
 ]
