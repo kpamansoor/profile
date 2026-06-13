@@ -19,5 +19,19 @@
     "liveLink": "https://clearcut.mdmansoor.in/",
     "repoLink": "https://github.com/mansoor/novella",
     "iconUrl": "https://img.icons8.com/?size=100&id=POBc2SrrhhnF&format=png&color=000000"
+  },
+  {
+    "name": "Bookmarklet Library — Free Browser Utility Tools.",
+    "description": "A collection of free, drag-and-drop bookmarklets that boost your productivity. Unlock copy-protected pages, generate QR codes, enable dark mode, auto-scroll, and more — no extensions needed.",
+    "liveLink": "https://bookmarlets.mdmansoor.in/",
+    "repoLink": "https://github.com/mansoor/",
+    "iconUrl": "https://img.icons8.com/?size=100&id=45074&format=png&color=000000"
+  },
+  {
+    "name": "JSONSpace | JSON Formatter",
+    "description": "Free online JSON formatter, validator, tree viewer, CSV converter, and diff tool. Format, beautify, minify, and fix JSON with smart suggestions. No backend required.",
+    "liveLink": "https://jsonspace.mdmansoor.in/",
+    "repoLink": "https://github.com/mansoor/",
+    "iconUrl": "https://img.icons8.com/?size=100&id=mA5qYTmW3Y2H&format=png&color=3BBB2E"
   }
 ]
