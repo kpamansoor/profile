@@ -63,6 +63,16 @@ export default function RootLayout({
     >
       <head>
         <meta name="color-scheme" content="light dark" />
+        <head>
+  <meta name="color-scheme" content="light dark" />
+  <Script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1243068719441957"
+    crossOrigin="anonymous"
+    strategy="afterInteractive"
+  />
+</head>
+
       </head>
       <body>
         <Script id="theme-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: themeInitScript }} />
