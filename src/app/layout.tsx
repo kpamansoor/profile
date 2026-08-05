@@ -32,7 +32,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mansoor — Developer & Maker",
     description: "Personal portfolio showcasing web applications, mobile applications, and experimental projects.",
-  }
+  },
+  other: {
+    "google-adsense-account": "ca-pub-1243068719441957",
+  },
 };
 
 const themeInitScript = `
