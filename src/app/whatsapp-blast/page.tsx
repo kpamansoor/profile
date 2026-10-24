@@ -17,9 +17,70 @@ function getApp(): DesktopApp {
 
 const app = getApp();
 
+const SITE_URL = "https://www.mdmansoor.in";
+const PAGE_URL = `${SITE_URL}/whatsapp-blast`;
+const OG_IMAGE_URL = `${SITE_URL}/whatsapp-blast/og-image.png`;
+const SEO_TITLE = "WhatsAppBlast: Bulk WhatsApp Sender for Windows";
+const SEO_DESCRIPTION =
+  "Send bulk WhatsApp messages to your contact groups from Windows. CSV import, personalized templates and live campaign tracking. No API fees, no coding.";
+
 export const metadata: Metadata = {
-  title: `${app.name} | Automated Sender`,
-  description: app.headline,
+  title: SEO_TITLE,
+  description: SEO_DESCRIPTION,
+  keywords: [
+    "WhatsApp bulk sender",
+    "bulk WhatsApp messages",
+    "WhatsApp broadcast software",
+    "WhatsApp sender for Windows",
+    "WhatsApp group message sender",
+    "WhatsApp marketing tool",
+    "WhatsApp campaign software",
+    "WhatsApp without API",
+    "mass WhatsApp messaging",
+    "WhatsAppBlast",
+  ],
+  applicationName: "WhatsAppBlast",
+  authors: [{ name: "Mansoor", url: SITE_URL }],
+  creator: "Mansoor",
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Mansoor",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: OG_IMAGE_URL,
+        secureUrl: OG_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "WhatsAppBlast logo with the tagline Bulk WhatsApp messages for Windows",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    images: [OG_IMAGE_URL],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: app.name,
+  applicationCategory: "BusinessApplication",
+  operatingSystem: app.platform,
+  softwareVersion: app.version,
+  description: SEO_DESCRIPTION,
+  url: PAGE_URL,
+  image: OG_IMAGE_URL,
+  author: { "@type": "Person", name: "Mansoor", url: SITE_URL },
 };
 
 const STEPS = [
@@ -312,6 +373,10 @@ function valueClass(value: string) {
 export default function WhatsAppBlastPage() {
   return (
     <div className={styles.pageLayout}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="container">
         <header className={`${styles.hero} fade-in`}>
           <div className={styles.heroText}>
