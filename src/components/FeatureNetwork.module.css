@@ -1,0 +1,190 @@
+/* Orbit feature layout: logo at the centre, features placed around a ring, with layered parallax. */
+
+.network {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2rem clamp(1.5rem, 5vw, 5rem);
+}
+
+/* Foreground stage: the positioning frame for the ring, logo and feature nodes. */
+.stage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 680px;
+  transform: translate3d(calc(var(--mx, 0) * 14px), calc(var(--my, 0) * 14px), 0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Ring: a true circle (centre line radius 260px). The 26px band is a masked conic gradient blending green and sky blue. */
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 546px;
+  height: 546px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: conic-gradient(from 200deg, #34d399, #38bdf8, #34d399);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 26px), #000 calc(100% - 26px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 26px), #000 calc(100% - 26px));
+  opacity: 0.3;
+}
+
+/* Centre logo */
+.hub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.22), rgba(11, 13, 16, 0.95) 72%);
+  box-shadow: 0 0 60px rgba(52, 211, 153, 0.25);
+}
+
+.hubLogo {
+  border-radius: 28px;
+}
+
+/* Feature node: an icon anchored on the ring, with its label beside it. */
+.node {
+  position: absolute;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+}
+
+.nodeIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0b0d10;
+  border: 2px solid #6ee7b7;
+  color: #d1fae5;
+  animation: emphasize 3.6s ease-in-out infinite;
+}
+
+@keyframes emphasize {
+  0%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(110, 231, 183, 0.15), 0 0 20px rgba(52, 211, 153, 0.35);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(110, 231, 183, 0.05), 0 0 40px rgba(52, 211, 153, 0.85);
+    transform: scale(1.08);
+  }
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  width: 180px;
+  transform: translateY(-50%);
+}
+
+.labelRight {
+  left: calc(100% + 18px);
+  text-align: left;
+}
+
+.labelLeft {
+  right: calc(100% + 18px);
+  text-align: right;
+}
+
+.label h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.label p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* Tablet and mobile: no ring. Logo on top, features in a grid. */
+@media (max-width: 1039px) {
+  .stage {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ring {
+    display: none;
+  }
+
+  .hub {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .node {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: auto;
+    height: auto;
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nodeIcon {
+    flex-shrink: 0;
+  }
+
+  .label {
+    position: static;
+    width: auto;
+    transform: none;
+    text-align: left !important;
+  }
+
+  .label p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1039px) {
+  .stage {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .network {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage,
+  .nodeIcon {
+    transform: none;
+    transition: none;
+    animation: none;
+  }
+}

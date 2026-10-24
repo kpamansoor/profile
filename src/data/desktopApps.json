@@ -1,0 +1,13 @@
+[
+  {
+    "name": "WhatsAppBlast",
+    "slug": "whatsapp-blast",
+    "version": "1.0.0",
+    "platform": "Windows",
+    "headline": "Send WhatsApp messages to your contact groups from your Windows desktop, with no API fees and no coding.",
+    "tagline": "Bulk WhatsApp messaging, made simple.",
+    "downloadLink": "https://pub-f3c069b4c32442a0b0274a082e849648.r2.dev/windows/WhatsAppBlast%20Setup%201.0.0.exe",
+    "repoLink": "",
+    "supportEmail": "pingtomansoor@gmail.com"
+  }
+]

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" width="300" height="180">
+  <rect width="300" height="180" rx="18" fill="#0f1714" stroke="#1f3a2f"/>
+
+  <!-- Template message with a personalization placeholder -->
+  <rect x="20" y="22" width="200" height="58" rx="16" fill="#1a2722"/>
+  <rect x="34" y="36" width="130" height="7" rx="3.5" fill="#cbd5d1" opacity="0.7"/>
+  <rect x="34" y="52" width="66" height="18" rx="9" fill="#34d399"/>
+  <text x="67" y="64.5" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#04251a">{name}</text>
+  <rect x="108" y="58" width="90" height="7" rx="3.5" fill="#6b7c74"/>
+
+  <!-- Preview bubble -->
+  <rect x="96" y="96" width="184" height="58" rx="16" fill="#34d399"/>
+  <rect x="110" y="112" width="130" height="7" rx="3.5" fill="#04251a" opacity="0.7"/>
+  <rect x="110" y="128" width="96" height="6" rx="3" fill="#04251a" opacity="0.5"/>
+</svg>

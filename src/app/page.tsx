@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import Deck from "@/components/Deck";
 import ProjectDrawer, { Project } from "@/components/ProjectDrawer";
@@ -9,6 +10,7 @@ import styles from "./page.module.css";
 
 import featuredApps from "@/data/featuredApps.json";
 import featuredWebApps from "@/data/featuredWebApps.json";
+import desktopApps from "@/data/desktopApps.json";
 import avatarImg from "@/assets/images/avatar.png";
 
 const PROJECTS: Project[] = [
@@ -202,6 +204,30 @@ export default function Home() {
     </div>
   </a>
 ))}
+          </div>
+        </section>
+
+        {/* Automated Sender Section */}
+        <section id="desktop-apps" className={`${styles.portfolioSection} fade-in delay-2`}>
+          <h2 className="section-title">Automated Senders</h2>
+          <div className={styles.projectList}>
+            {desktopApps.map((app) => (
+              <Link
+                key={app.slug}
+                href={`/${app.slug}`}
+                className={`glass-card ${styles.projectCard}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className={styles.projectCardHeader}>
+                  <div>
+                    <h3 className={styles.projectCardTitle}>{app.name}</h3>
+                    <p className={styles.projectCardSubtitle}>Automated Sender</p>
+                  </div>
+                  <span className={styles.cardArrow}>→</span>
+                </div>
+                <p className={styles.projectCardDesc}>{app.tagline}</p>
+              </Link>
+            ))}
           </div>
         </section>
 

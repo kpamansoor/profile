@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WhatsAppBlast logo">
+  <defs>
+    <linearGradient id="wab-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#wab-gradient)"/>
+  <path d="M112 160 L184 352 L256 192 L328 352 L400 160" fill="none" stroke="#ffffff" stroke-width="56" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

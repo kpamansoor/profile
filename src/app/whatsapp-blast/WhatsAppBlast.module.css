@@ -1,0 +1,638 @@
+/* Dark, green-accented theme matching the WhatsAppBlast app. */
+.pageLayout {
+  --background: #0b0d10;
+  --foreground: #f5f5f5;
+  --accent: #34d399;
+  --accent-subtle: rgba(52, 211, 153, 0.12);
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-hover: rgba(255, 255, 255, 0.06);
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-hover: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 85% -10%, rgba(52, 211, 153, 0.14), transparent 55%),
+    var(--background);
+  color: var(--foreground);
+  color-scheme: dark;
+}
+
+/* Use the full width of the viewport, with side padding that scales. */
+.pageLayout main.container {
+  max-width: 1400px;
+  padding-left: clamp(1.5rem, 5vw, 5rem);
+  padding-right: clamp(1.5rem, 5vw, 5rem);
+}
+
+/* Hero: text on the left, logo and actions on the right. */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 4rem;
+  }
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 2.5rem 2rem;
+  border-radius: 28px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  letter-spacing: -0.01em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.primaryBtn {
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  background: var(--accent);
+  color: var(--background);
+}
+
+.primaryBtn .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.primaryBtn:hover {
+  opacity: 0.85;
+}
+
+.secondaryBtn {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.disabledBtn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-width section: breaks out of the centred container to span the viewport. */
+.fullBleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* Aligns the heading with the container content on the left edge. */
+.fullBleedTitle {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 5vw, 5rem);
+  padding-right: clamp(1.5rem, 5vw, 5rem);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+
+/* Why people like it: zig-zag rows with a photo node and a pill, mirroring the flow above. */
+.whyRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 1rem;
+}
+
+.whyPill {
+  position: relative;
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1.25rem 1.5rem;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.whyPill strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.whyPill p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.whyNode {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  width: 88px;
+  height: 88px;
+  margin: 0;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px var(--accent),
+    0 0 0 10px var(--background),
+    0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.whyPhoto {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.whyBadge {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: #065f46;
+  box-shadow: 0 0 0 3px var(--background);
+}
+
+.whyBadge .icon {
+  width: 18px;
+  height: 18px;
+  color: #065f46;
+}
+
+@media (min-width: 720px) {
+  .whyRow {
+    grid-template-columns: minmax(0, 1fr) 136px minmax(0, 1fr);
+    column-gap: 1rem;
+    min-height: 180px;
+    align-items: center;
+  }
+
+  .whyPill {
+    grid-row: 1;
+    padding: 0.8rem 1.25rem;
+    border-radius: 999px;
+  }
+
+  /* Pills run partly under the photo (tucked look, as in the flow above).
+     The inner padding keeps the text clear of the overlapped part. */
+  .whyPillLeft {
+    grid-column: 1;
+    text-align: right;
+    margin-right: -40px;
+    padding-right: 2.25rem;
+  }
+
+  .whyPillRight {
+    grid-column: 3;
+    text-align: left;
+    margin-left: -40px;
+    padding-left: 2.25rem;
+  }
+
+  .whyNode {
+    grid-column: 2;
+    width: 136px;
+    height: 136px;
+  }
+
+  .whyBadge {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whyBadge .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* How it works: zig-zag flow with alternating pills and a dotted S-curve. */
+.flow {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flowRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  align-items: center;
+  row-gap: 0.75rem;
+}
+
+/* Step illustration: sits under the pill on mobile. */
+.flowVisual {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+}
+
+.flowImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flowNumber {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: 0 0 0 8px var(--background);
+}
+
+.flowPill {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: -26px;
+  padding: 1.15rem 1.75rem 1.15rem 3rem;
+  border-radius: 999px;
+  text-align: left;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.flowPill strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.flowPill p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Pill tones, kept within the green theme. */
+.toneBright {
+  background: linear-gradient(120deg, #a7f3d0, #34d399);
+  color: #04251a;
+}
+
+.toneDeep {
+  background: linear-gradient(120deg, #065f46, #047857);
+  color: #ecfdf5;
+}
+
+.toneTeal {
+  background: linear-gradient(120deg, #134e4a, #0f766e);
+  color: #ecfdf5;
+}
+
+.toneDark {
+  background: linear-gradient(120deg, #101a16, #0b1412);
+  color: #ecfdf5;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+.toneDark strong {
+  color: var(--accent);
+}
+
+/* Dotted S-curve between rows (desktop only). */
+.flowConnector {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: 200px;
+  height: 180px;
+  transform: translateX(-50%);
+  overflow: visible;
+  color: var(--accent);
+  pointer-events: none;
+}
+
+.flowConnector path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0 10;
+  opacity: 0.85;
+}
+
+.flowConnectorFlip {
+  transform: translateX(-50%) scaleX(-1);
+}
+
+@media (min-width: 720px) {
+  .flowRow {
+    grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+    min-height: 180px;
+  }
+
+  .flowVisual {
+    grid-row: 1;
+  }
+
+  .flowVisualLeft {
+    grid-column: 1;
+    justify-self: end;
+  }
+
+  .flowVisualRight {
+    grid-column: 3;
+    justify-self: start;
+  }
+
+  .flowNumber {
+    grid-column: 2;
+    width: 72px;
+    height: 72px;
+    font-size: 1.4rem;
+  }
+
+  .flowPill {
+    grid-column: 3;
+    margin-left: -26px;
+    padding: 1.25rem 2.5rem 1.25rem 3rem;
+  }
+
+  .flowPillLeft {
+    grid-column: 1;
+    margin-left: 0;
+    margin-right: -26px;
+    padding: 1.25rem 3rem 1.25rem 2.5rem;
+    text-align: right;
+  }
+
+  .flowConnector {
+    display: block;
+  }
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.footer a {
+  opacity: 0.65;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hero extras */
+.heroLogo {
+  width: 160px;
+  height: 160px;
+  border-radius: 36px;
+  box-shadow: 0 0 60px rgba(52, 211, 153, 0.3);
+}
+
+.headline {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  font-weight: 500;
+  max-width: 40rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Free vs Pro plan cards */
+.planGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .planGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.planCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem;
+}
+
+.planCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.planPro {
+  border: 1px solid var(--accent);
+  background: radial-gradient(circle at top right, rgba(52, 211, 153, 0.18), transparent 60%), var(--card-bg);
+  box-shadow: 0 0 40px rgba(52, 211, 153, 0.15);
+}
+
+.planList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.planList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.planList li:last-child {
+  border-bottom: none;
+}
+
+.planList strong {
+  font-weight: 600;
+  text-align: right;
+}
+
+.yes {
+  color: var(--accent);
+}
+
+.no {
+  opacity: 0.5;
+}
+
+/* FAQ */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faqItem summary {
+  cursor: pointer;
+  font-family: var(--font-bricolage), sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  list-style: none;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+}
+
+.faqItem[open] summary::after {
+  content: "−";
+}
+
+.faqItem p {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Disclaimer */
+.disclaimer {
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid var(--accent);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.disclaimer p {
+  margin: 0 0 0.6rem;
+}
+
+.disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.disclaimerTitle {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #dc2626;
+}
