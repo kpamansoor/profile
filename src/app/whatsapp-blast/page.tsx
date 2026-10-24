@@ -475,6 +475,10 @@ export default function WhatsAppBlastPage() {
                   </li>
                 ))}
               </ul>
+              <button type="button" className={`${styles.primaryBtn} ${styles.planBtn}`} disabled aria-disabled="true">
+                Get it now
+              </button>
+              <p className={styles.planNote}>Coming soon</p>
             </article>
           </div>
         </section>

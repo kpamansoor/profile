@@ -209,7 +209,7 @@ export default function Home() {
 
         {/* Automated Sender Section */}
         <section id="desktop-apps" className={`${styles.portfolioSection} fade-in delay-2`}>
-          <h2 className="section-title">Automated Senders</h2>
+          <h2 className="section-title">Desktop Applications</h2>
           <div className={styles.projectList}>
             {desktopApps.map((app) => (
               <Link
@@ -219,9 +219,20 @@ export default function Home() {
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <div className={styles.projectCardHeader}>
-                  <div>
-                    <h3 className={styles.projectCardTitle}>{app.name}</h3>
-                    <p className={styles.projectCardSubtitle}>Automated Sender</p>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ position: 'relative', width: 40, height: 40, flexShrink: 0 }}>
+                      <Image
+                        src="/whatsapp-blast-logo.svg"
+                        alt={`${app.name} logo`}
+                        fill
+                        unoptimized
+                        style={{ borderRadius: '8px', objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div>
+                      <h3 className={styles.projectCardTitle}>{app.name}</h3>
+                      <p className={styles.projectCardSubtitle}>Automated Sender</p>
+                    </div>
                   </div>
                   <span className={styles.cardArrow}>→</span>
                 </div>
