@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./WhatsAppBlast.module.css";
 import FeatureNetwork from "@/components/FeatureNetwork";
 import desktopApps from "@/data/desktopApps.json";
+import { WHATSAPP_BLAST_DOWNLOADS } from "@/config/downloads";
 
 type DesktopApp = (typeof desktopApps)[number];
 
@@ -402,12 +403,21 @@ export default function WhatsAppBlastPage() {
             <div className={styles.actions}>
               <a
                 className={styles.primaryBtn}
-                href={app.downloadLink}
+                href={WHATSAPP_BLAST_DOWNLOADS.windows}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Icon name="download" />
                 <span>Download for Windows</span>
+              </a>
+              <a
+                className={styles.secondaryBtn}
+                href={WHATSAPP_BLAST_DOWNLOADS.appleSilicon}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name="download" />
+                <span>Download for Apple Silicon</span>
               </a>
             </div>
           </div>
@@ -570,8 +580,11 @@ export default function WhatsAppBlastPage() {
 
         <footer className={styles.footer}>
           <div className={styles.footerLinks}>
-            <a href={app.downloadLink} target="_blank" rel="noopener noreferrer">
+            <a href={WHATSAPP_BLAST_DOWNLOADS.windows} target="_blank" rel="noopener noreferrer">
               Download for Windows
+            </a>
+            <a href={WHATSAPP_BLAST_DOWNLOADS.appleSilicon} target="_blank" rel="noopener noreferrer">
+              Download for Apple Silicon
             </a>
             <a href={`mailto:${app.supportEmail}`}>Support: {app.supportEmail}</a>
           </div>
