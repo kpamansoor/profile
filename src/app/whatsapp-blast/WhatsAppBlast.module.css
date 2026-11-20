@@ -22,7 +22,11 @@
 
 /* Use the full width of the viewport, with side padding that scales. */
 .pageLayout main.container {
-  max-width: 1400px;
+  width: 80%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   padding-left: clamp(1.5rem, 5vw, 5rem);
   padding-right: clamp(1.5rem, 5vw, 5rem);
 }
