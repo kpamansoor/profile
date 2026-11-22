@@ -21,9 +21,9 @@ const app = getApp();
 const SITE_URL = "https://www.mdmansoor.in";
 const PAGE_URL = `${SITE_URL}/whatsapp-blast`;
 const OG_IMAGE_URL = `${SITE_URL}/whatsapp-blast/og-image.png`;
-const SEO_TITLE = "WhatsAppBlast: Bulk WhatsApp Sender for Windows";
+const SEO_TITLE = "WhatsAppBlast: Bulk WhatsApp Sender for Windows & Apple Desktop";
 const SEO_DESCRIPTION =
-  "Send bulk WhatsApp messages to your contact groups from Windows. CSV import, personalized templates and live campaign tracking. No API fees, no coding.";
+  "Send bulk WhatsApp messages to your contact groups from Windows or Apple Desktop. CSV import, personalized templates and live campaign tracking. No API fees, no coding.";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "WhatsApp bulk sender",
     "bulk WhatsApp messages",
     "WhatsApp broadcast software",
-    "WhatsApp sender for Windows",
+    "WhatsApp sender for Windows & Apple Desktop",
     "WhatsApp group message sender",
     "WhatsApp marketing tool",
     "WhatsApp campaign software",
@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   creator: "Mansoor",
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/whatsapp-blast-logo.svg",
+  },
   openGraph: {
     title: SEO_TITLE,
     description: SEO_DESCRIPTION,
@@ -59,7 +62,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "WhatsAppBlast logo with the tagline Bulk WhatsApp messages for Windows",
+        alt: "WhatsAppBlast logo with the tagline Bulk WhatsApp messages for Windows & Apple Desktop",
       },
     ],
   },
@@ -180,7 +183,7 @@ const WHY_PEOPLE_LIKE_IT = [
   {
     title: "Easy installer",
     description:
-      "A standard Windows setup file that you can share and install in minutes.",
+      "Standard Windows setup files and Apple Desktop installers that you can share and install in minutes.",
     image: "/whatsapp-blast/why/easy-installer.jpg",
     imageAlt: "Person using a laptop and phone at a cafe table",
   },
@@ -213,9 +216,9 @@ const FAQS = [
       "No. WhatsAppBlast works with your own WhatsApp number, so there is no Business API approval and no per-message fees.",
   },
   {
-    question: "Which Windows versions are supported?",
+    question: "Which operating systems are supported?",
     answer:
-      "WhatsAppBlast supports Windows 7 and above. It is distributed as a standard Windows setup file that you can install in minutes.",
+      "WhatsAppBlast supports Windows 7 and above on Windows, and macOS 10.13 and above on Apple Desktop. It is distributed as standard installers for each platform that you can install in minutes.",
   },
 ];
 
@@ -386,7 +389,7 @@ export default function WhatsAppBlastPage() {
             <p className={styles.headline}>{app.headline}</p>
             <p className={styles.tagline}>{app.tagline}</p>
             <p className={styles.meta}>
-              Version {app.version} &middot; {app.platform} setup file &middot; Free version available
+              Version {app.version} &middot; {app.platform} &middot; Free version available
             </p>
           </div>
 
