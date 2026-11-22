@@ -153,6 +153,21 @@
   flex-direction: column;
 }
 
+/* Video section styling */
+.videoSection {
+  margin: 3rem 0;
+  gap: 1.5rem;
+}
+
+.walkthroughVideo {
+  border-radius: 16px;
+  box-shadow: 0 20px 50px var(--shadow);
+  border: 1px solid var(--border);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Full-width section: breaks out of the centred container to span the viewport. */
 .fullBleed {
   width: 100vw;

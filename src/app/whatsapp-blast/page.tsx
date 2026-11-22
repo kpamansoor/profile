@@ -423,6 +423,22 @@ export default function WhatsAppBlastPage() {
           </div>
         </header>
 
+        <section className={`${styles.section} ${styles.videoSection} fade-in delay-1`}>
+          <h2 className="section-title">See it in action</h2>
+          <video
+            className={styles.walkthroughVideo}
+            autoPlay
+            loop
+            muted
+            controls
+            width="100%"
+            height="auto"
+          >
+            <source src="/whatsapp-blast/WhatsAppBlast_walkthrough.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
         <section className={`${styles.section} fade-in delay-1`}>
           <h2 className="section-title">How it works</h2>
           <ol className={styles.flow}>
