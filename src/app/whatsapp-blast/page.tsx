@@ -587,6 +587,11 @@ export default function WhatsAppBlastPage() {
               </details>
             ))}
           </div>
+          <div style={{ marginTop: "2rem", textAlign: "center" }}>
+            <a href="/whatsapp-blast/faq" className={styles.primaryBtn} style={{ display: "inline-flex" }}>
+              View full FAQ with screenshots →
+            </a>
+          </div>
         </section>
 
         <section className={`${styles.section} fade-in delay-4`}>
