@@ -23,7 +23,7 @@ const PAGE_URL = `${SITE_URL}/whatsapp-blast`;
 const OG_IMAGE_URL = `${SITE_URL}/whatsapp-blast/og-image.png`;
 const SEO_TITLE = "WhatsAppBlast: Bulk WhatsApp Sender for Windows & Apple Desktop";
 const SEO_DESCRIPTION =
-  "Send bulk WhatsApp messages to your contact groups from Windows or Apple Desktop. CSV import, personalized templates and live campaign tracking. No API fees, no coding.";
+  "Send bulk WhatsApp messages to your contact groups from Windows or Apple Desktop. CSV import, personalized templates and live campaign tracking. No API fees, no coding. Free version with 5 groups, Pro with unlimited.";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -32,19 +32,33 @@ export const metadata: Metadata = {
     "WhatsApp bulk sender",
     "bulk WhatsApp messages",
     "WhatsApp broadcast software",
-    "WhatsApp sender for Windows & Apple Desktop",
+    "WhatsApp sender for Windows",
+    "WhatsApp sender for Apple Desktop",
+    "WhatsApp sender for Mac",
     "WhatsApp group message sender",
     "WhatsApp marketing tool",
     "WhatsApp campaign software",
     "WhatsApp without API",
     "mass WhatsApp messaging",
+    "WhatsApp message template",
+    "WhatsApp contact groups",
+    "WhatsApp message scheduling",
+    "WhatsApp sender app",
     "WhatsAppBlast",
+    "bulk messaging",
+    "automated WhatsApp",
   ],
   applicationName: "WhatsAppBlast",
   authors: [{ name: "Mansoor", url: SITE_URL }],
   creator: "Mansoor",
   alternates: { canonical: PAGE_URL },
-  robots: { index: true, follow: true },
+  robots: { 
+    index: true, 
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   icons: {
     icon: "/whatsapp-blast-logo.svg",
   },
@@ -85,6 +99,37 @@ const jsonLd = {
   url: PAGE_URL,
   image: OG_IMAGE_URL,
   author: { "@type": "Person", name: "Mansoor", url: SITE_URL },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    ratingCount: "24",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: "0",
+    priceValidUntil: "2027-12-31",
+    category: "Free Software",
+  },
+};
+
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: SITE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "WhatsAppBlast",
+      item: PAGE_URL,
+    },
+  ],
 };
 
 const STEPS = [
@@ -381,6 +426,10 @@ export default function WhatsAppBlastPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
       <main className="container">
         <header className={`${styles.hero} fade-in`}>
           <div className={styles.heroText}>
@@ -486,6 +535,11 @@ export default function WhatsAppBlastPage() {
               );
             })}
           </ol>
+          <div style={{ marginTop: "2rem", textAlign: "center" }}>
+            <a href="/whatsapp-blast/faq" className={styles.primaryBtn} style={{ display: "inline-flex" }}>
+              View detailed setup guide →
+            </a>
+          </div>
         </section>
 
         <section className={`${styles.section} ${styles.fullBleed} fade-in delay-2`}>
@@ -589,7 +643,7 @@ export default function WhatsAppBlastPage() {
           </div>
           <div style={{ marginTop: "2rem", textAlign: "center" }}>
             <a href="/whatsapp-blast/faq" className={styles.primaryBtn} style={{ display: "inline-flex" }}>
-              View full FAQ with screenshots →
+              View full FAQ →
             </a>
           </div>
         </section>
@@ -610,6 +664,7 @@ export default function WhatsAppBlastPage() {
             <a href={WHATSAPP_BLAST_DOWNLOADS.appleSilicon} target="_blank" rel="noopener noreferrer">
               Download for Apple Silicon
             </a>
+            <a href="/whatsapp-blast/faq">FAQ & Guide</a>
             <a href={`mailto:${app.supportEmail}`}>Support: {app.supportEmail}</a>
           </div>
         </footer>

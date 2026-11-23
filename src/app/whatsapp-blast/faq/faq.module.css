@@ -105,8 +105,10 @@
 
 .toc {
   position: sticky;
-  top: 24px;
+  top: 20px;
   font-size: 0.98rem;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 
 .tocTitle {

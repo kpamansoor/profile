@@ -8,29 +8,49 @@ const PAGE_URL = `${SITE_URL}/whatsapp-blast/faq`;
 const OG_IMAGE_URL = `${SITE_URL}/whatsapp-blast/og-image.png`;
 
 export const metadata: Metadata = {
-  title: "WhatsAppBlast FAQ: setup, contacts, templates, campaigns and safety",
+  title: "WhatsAppBlast FAQ: Setup, Contacts, Templates, Campaigns & Safety Guide",
   description:
-    "Answers about WhatsAppBlast: how to link WhatsApp, create contact groups, write templates, send campaigns, read history and use the app safely, with screenshots.",
+    "Complete FAQ guide for WhatsAppBlast. Learn how to link WhatsApp, create contact groups, write message templates, send bulk campaigns, track history, and use the app safely. With step-by-step screenshots.",
   keywords: [
     "WhatsAppBlast FAQ",
     "WhatsAppBlast guide",
-    "WhatsAppBlast tutorial",
     "how to use WhatsAppBlast",
+    "WhatsAppBlast tutorial",
     "WhatsApp bulk sender guide",
+    "WhatsApp group messaging",
+    "bulk WhatsApp messages",
+    "WhatsApp contact groups",
+    "message templates WhatsApp",
+    "WhatsApp campaigns",
+    "WhatsApp sender tutorial",
+    "WhatsAppBlast setup",
+    "WhatsApp message scheduling",
+    "bulk messaging guide",
   ],
-  alternates: { canonical: PAGE_URL },
-  robots: { index: true, follow: true },
+  alternates: { 
+    canonical: PAGE_URL,
+  },
+  robots: { 
+    index: true, 
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   icons: {
     icon: "/whatsapp-blast-logo.svg",
   },
   openGraph: {
-    title: "WhatsAppBlast FAQ",
+    title: "WhatsAppBlast FAQ Guide",
     description:
-      "Answers about WhatsAppBlast: how to link WhatsApp, create contact groups, write templates, send campaigns, read history and use the app safely, with screenshots.",
+      "Complete tutorial with screenshots: How to set up WhatsAppBlast, manage contacts, create templates, send bulk campaigns, and use safely.",
     url: PAGE_URL,
     siteName: "Mansoor",
     type: "article",
     locale: "en_US",
+    publishedTime: "2026-11-01T00:00:00Z",
+    modifiedTime: "2026-11-23T00:00:00Z",
+    authors: ["Mansoor"],
     images: [
       {
         url: OG_IMAGE_URL,
@@ -38,16 +58,17 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "WhatsAppBlast logo",
+        alt: "WhatsAppBlast FAQ - Bulk WhatsApp Sender Guide",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsAppBlast FAQ",
+    title: "WhatsAppBlast FAQ Guide",
     description:
-      "Complete guide: how to link WhatsApp, create contact groups, write templates, send campaigns, and use the app safely.",
+      "Learn how to use WhatsAppBlast: Set up, manage contacts, create templates, send campaigns, and stay safe.",
     images: [OG_IMAGE_URL],
+    creator: "@mdmansoor",
   },
 };
 
@@ -78,6 +99,71 @@ const jsonLd = {
         "@type": "Answer",
         text: "WhatsAppBlast supports Windows 7 and above and is installed with a standard setup file. There is also a build for Apple Desktop. Both downloads are on the WhatsAppBlast page.",
       },
+    },
+    {
+      "@type": "Question",
+      name: "How do I link my WhatsApp account?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You link your account once by scanning a QR code, the same way you would link WhatsApp Web. Open WhatsAppBlast, scan the QR code with your phone, and when the link succeeds, the app opens on the Contacts page.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I create a contact group?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A contact group is a named list of recipients. Open the Contacts tab, type a group name, paste or type your numbers, and click Save group.",
+      },
+    },
+  ],
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.mdmansoor.in",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "WhatsAppBlast",
+        item: "https://www.mdmansoor.in/whatsapp-blast",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "FAQ",
+        item: "https://www.mdmansoor.in/whatsapp-blast/faq",
+      },
+    ],
+  },
+};
+
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.mdmansoor.in",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "WhatsAppBlast",
+      item: "https://www.mdmansoor.in/whatsapp-blast",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "FAQ",
+      item: "https://www.mdmansoor.in/whatsapp-blast/faq",
     },
   ],
 };
@@ -167,22 +253,32 @@ const FAQ_SECTIONS: Section[] = [
           <>
             <p>
               You link your account once by scanning a QR code, the same way you would link
-              WhatsApp Web.
+              WhatsApp Web. When you open WhatsAppBlast for the first time, you'll see the QR code
+              scan screen. Follow these steps:
             </p>
             <ol>
-              <li>Open WhatsAppBlast. A QR code appears on the first screen.</li>
               <li>
-                On your phone, open WhatsApp and go to Linked devices (in Settings on iPhone, or
-                in the menu on Android).
+                <strong>Open WhatsApp on your phone</strong> and tap <strong>Linked Devices</strong>
+                .
               </li>
-              <li>Choose Link a device and scan the QR code on your computer screen.</li>
-              <li>When the link succeeds, the app opens on the Contacts page.</li>
+              <li>
+                <strong>Select Link a Device</strong> and use your phone camera to scan the QR code
+                displayed on your computer screen.
+              </li>
+              <li>
+                <strong>Wait for verification</strong> — Once verified, WhatsAppBlast will open
+                automatically and you'll be taken to the Contacts page.
+              </li>
             </ol>
+            <p>
+              The QR code is unique to each session and expires for security reasons. If it expires,
+              click the <strong>Retry</strong> button to generate a new one.
+            </p>
           </>
         ),
         image: {
-          src: "/whatsapp-blast/faq-images/activity-800.webp",
-          alt: "WhatsAppBlast QR code linking screen",
+          src: "/whatsapp-blast/faq-images/qr-code-scan-setup.png",
+          alt: "WhatsAppBlast QR code scan screen with setup instructions on the right side",
         },
       },
       {
@@ -498,6 +594,10 @@ export default function FAQPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
 
       <header className={styles.header}>
